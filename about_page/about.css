@@ -1,0 +1,625 @@
+/* GLOBAL CSS */
+:root {
+    /* light theme */
+    --primary-white-background-color: #fff;
+    --secondary-white-background-color: #f8f9fa;
+    /* Dark theme */
+    --primary-dark-background-color: #151421;
+    --secondary-dark-background-color: #100F19;
+    /* color */
+    --white-color: #ffffff;
+    --black-color: #000;
+    --green-color: #009f4d;
+    --hover-green-color: #008030;
+    --border-color: #00a63f;
+    --hover-border-color: #00732c;
+    --body-text-color: #666;
+    --footer-color: #151421;
+    --dark-heading-text-color: #3f3a64;
+    --heading-sub-color: #7e7d7d;
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html,
+body {
+    font-size: 16px;
+    font-family: 'Jost', sans-serif;
+}
+
+/* cài fontsize ,fontweight cho h2,h3,h4 va p */
+/* light mode */
+.heading2__dark {
+    font-size: 2.1875rem;
+    font-weight: 700;
+    color: var(--dark-heading-text-color);
+    line-height: 45px;
+}
+
+.heading3__dark {
+    font-size: 1.375rem;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--black-color);
+}
+
+.heading4__dark {
+    font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 28px;
+    color: var(--dark-heading-text-color);
+}
+
+.sub__heading {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--heading-sub-color);
+    line-height: 30px;
+    text-transform: capitalize;
+}
+p{
+    font-size: 1.0625rem;
+    font-weight: 400;
+    line-height: 27px;
+    color: var(--body-text-color);
+}
+/* tạo component button màu xanh chữ trắng ***strart */
+.btn__corp#btnCorp
+{
+    color: var(--white-color);
+    background-color: var(--border-color);
+    padding: 1rem 3rem;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    transition: all 0.5s;
+    
+}
+.btn__corp#btnCorp:hover {
+    background-color: var(--hover-border-color);
+}
+
+/* tạo component button màu xanh chữ trắng ***end */
+
+            /* CSS Dev1 start */
+/* HEADER start */
+header {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+header{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 100;
+
+}
+header .navbar .nav__left{
+    justify-content: center;
+    align-items: flex-start;
+}
+header .navbar .nav__left h2 {
+    color: var(--black-color);
+    line-height: 0.6;
+
+}
+header .navbar .nav__left h2 {
+    color: var(--white-color);
+    font-size: 1.875rem;
+    font-weight: 600;
+    text-align: center;
+}
+header .navbar .nav__left .nav__brand__icon .fa-align-right {
+    color: var(--border-color);
+    font-size: 2rem;
+    margin-right: 0.3rem;
+    line-height: 0.5;
+}
+header .navbar .nav__left h2 span {
+    font-size:0.875rem;
+    line-height: 17px;
+    color: var(--white-color); 
+}
+/* nav menu, nav midle ===================*/
+header .navbar .nav__midle {
+color: var(--white-color);
+flex-direction: column;
+
+}
+header .navbar .nav__midle .nav-item .nav-link {
+    color: var(--white-color);
+    text-transform: uppercase;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    margin: auto 0.5rem;
+    opacity: 0.8;
+    transition: all 0.5s;
+}header .navbar .nav__midle .nav-item:hover .nav-link {
+    color: #fefefe;
+    opacity: 1;
+}
+/* remove icon arrow down of boostrap */
+.navbar-nav .nav-item.dropdown .nav-link::after {
+    display: none;
+}
+/* add new icon arrow down */
+.navbar-nav .nav-item.dropdown .nav-link .fa-angle-down {
+    font-size: 0.8rem;
+}
+
+/* nav right, search btn, mode btn ============ */
+header .navbar .nav__right {
+    color: var(--white-color);
+}
+header .navbar .nav__right .btn__search{
+    background: var(--green-color);
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 0;
+}
+header .navbar .nav__right .btn__mode {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    font-size: 1.5rem;
+    border: none;
+    color: var(--white-color);
+    background: transparent;
+}
+header .navbar .nav__right .btn__mode .btn__light{
+    display: none;
+}
+
+/* BREADCRUMB Start */
+.breadcrumb {
+    width: 100vw;
+}
+.breadcrumb__overlay {
+    width: 100%;
+    max-height: 400px;
+    overflow: hidden;
+}
+.breadcrumb__overlay img {
+    width: 100%;
+}
+.breadcrumb__overlay::after {
+    content: "";
+    background: rgba(37, 44, 59, 0.7);
+    width: 100%;
+    height: 400px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.breadcrumb__text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 400px;
+    color: var(--white-color);
+}
+.breadcrumb__text h2 {
+    color: var(--white-color);
+    size: 50px;
+    line-height: 60px;
+    font-size: 60px;
+    font-weight: 600;
+}
+.breadcrumb__text p {
+    color: #fff;
+    font-size: 1.25rem;
+}
+/* Breadcrumb end */
+
+/* css cho button video */
+.btn__video {
+    border: 1px solid var(--border-color);
+    background: white;
+    font-size: 1.5rem;
+    color: var(--border-color);
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-left: 1.5rem;
+}
+
+/* tao khung hinh elip cho hinh anh */
+.about__company {
+    position: relative;
+}
+.about__company .col__left img {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+/* tao background hinh elip phia sau hinh anh */
+.about__company .col__left .background__elip {
+    background-color: var(--border-color);
+    opacity: 0.5;
+    width: 500px;
+    height: 500px;
+    border-radius: 30% 91% 99% 22%/17% 90% 47% 92%;
+    position: absolute;
+    top: 0;
+    z-index: 1
+}
+/* tao background col__left__tile */
+.about__company .col__left .col__left__title {
+    position: absolute;
+    bottom: -24%;
+    right: 64%;
+    height: 200px;
+    width: 200px;
+    transform: rotate(45deg);
+    background-color: var(--green-color);
+    border-radius: 15px;
+    box-shadow: 40px 19px 20px 30px rgb(0, 0, 0, 0.1);
+    z-index: 3;
+}
+
+.about__company .col__left .col__left__title span {
+    color: var(--white-color);
+    font-size: 3.125rem;
+    font-weight: 600;
+    line-height: 40px;
+
+}
+.about__company .col__left .col__left__title .d-flex p {
+    color: var(--primary-white-background-color);
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+.about__company .col__left .col__left__title .d-flex {
+    transform: rotate(-45deg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: -2rem;
+}
+.about__company .heading4__dark {
+    margin: 1rem auto;
+}
+section {
+    padding: 2rem;
+}
+.about__company {
+    margin-bottom: 10rem auto;
+}
+/* value__company */
+.value__company {
+    margin: 15rem auto;
+}
+.value__company .col-item {
+    background-color: #F8F9FA;
+    width: calc(33.33% - 6rem);
+    margin: auto 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 10px;
+}
+/* number ***start*** */
+.number__corp{
+    background: #F8F9FA;
+    padding: 7rem;
+}
+.number__corp .col__left__top .heading2__dark {
+    margin: 2rem auto;
+}
+.number__corp .col__left__bot p:nth-child(1) {
+    color: var(--green-color);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+.number__corp .col__left__bot {
+    margin-top: 5rem;
+}
+/* number/ col right */
+.number__corp .col__right__pic {
+    margin-right: 2rem;
+}
+.number__corp .col__right__pic img {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+/* number ***end*** */
+
+
+/* solution **start*** */
+.solution.container-fluid {
+    background: linear-gradient(rgba(39, 39, 48, 0.7),rgba(54, 54, 54, 0.7)), url(./img/bg1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    min-height: 400px;
+}
+.solution .solution__content {
+    text-align: center;
+    color: var(--primary-white-background-color);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8rem;
+}
+.solution .solution__content p {
+    color: var(--primary-white-background-color);
+}
+.solution__content .btn__video.btn2 {
+    background-color: transparent;
+    border:2px solid #ffffff;
+}
+.solution__content .btn__video.btn2 .bx-right-arrow{
+    color:#ffffff;
+}
+/* solution ***end*** */
+
+/* <!-- Meet the team ***start***--> */
+.meet__team__content .meet__team__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+.meet__team__content .meet__team__bot .row{
+    gap: 10px;
+}
+.meet__team__content .meet__team__bot .col__team__item {
+    /* margin: auto 1rem; */
+    width: calc(25% - 10px);
+}
+.meet__team__content .meet__team__bot .row img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+/* tạo lớp mờ overlay cho img */
+.meet__team__bot .col__team__item__pic {
+    position: relative;
+    overflow: hidden;
+}
+.meet__team__bot .col__team__item__pic .col__team__item__overlay {
+    background-color: rgb(63, 58, 100, 0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    opacity: 0;
+    color: var(--primary-white-background-color);
+    transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.meet__team__bot .col__team__item__pic .col__team__item__overlay:hover {
+    opacity: 1;
+}
+.meet__team__bot .col__team__item__pic .col__team__item__overlay p {
+    color: var(--primary-white-background-color);
+}
+.col__team__overlay__content {
+    transform: translateY(200%);
+    transition: all 0.5s;
+}
+.col__team__item__pic .col__team__item__overlay:hover .col__team__overlay__content{
+    transform: translateY(0);
+}
+.col__team__item__pic .col__team__item__overlay:hover{
+    border-radius: 10px;
+}
+/* tạo border và hover cho icon social */
+.meet__team__bot .social__overlay i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.5s;
+}
+.meet__team__bot .social__overlay i:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+}
+/* team member */
+.meet__team__bot .col__team__item .col__team__member {
+    text-align: center;
+}
+.meet__team__bot .col__team__item .col__team__member p {
+    color: var(--black-color);
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+.meet__team__bot .col__team__item .col__team__member p span {
+    color: var(--body-text-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+/* <!-- Meet the team ***end***--> */
+
+/* why choose us ***start */
+.choose__us {
+    background-color:#F7F7F7 ;
+    padding: 2rem;
+}
+.choose__us .choose__us__top {
+    text-align: center;
+}
+
+/* choose__us__bot */
+.choose__us__bot {
+    margin: 3rem auto;
+}
+.choose__us__bot .col__item {
+    justify-content: center;
+    align-items: flex-start;
+    margin: 1.5rem auto;
+}
+
+.choose__us__bot .col__item .col__item__content a{
+    text-decoration: none;
+}
+.choose__us__bot .col__item .col__item__content a:hover {
+    color: var(--hover-border-color);
+}
+.choose__us__bot .col__item .col__item__content {
+    padding: auto 5rem;
+    flex-basis: 65%;
+}
+/* make border for icon */
+.choose__us__bot .col__item .col__item__icon i{
+    font-size: 1.8rem;
+    font-weight: 600;
+    /* border: 1px solid #000; */
+    border-radius: 7px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    margin-right: 2rem;
+}
+
+/* adjust color for icon */
+.choose__us__bot .col__item:nth-child(1) .col__item__icon i {
+    border: 1px solid var(--border-color);
+    color: var(--border-color);
+}
+.choose__us__bot .col__item:nth-child(2) .col__item__icon i {
+    border: 1px solid var(--footer-color);
+    color: var(--footer-color);
+}
+.choose__us__bot .col__item:nth-child(3) .col__item__icon i {
+    border: 1px solid #FF4C4C;
+    color: #FF4C4C;
+}
+.choose__us__bot .col__item:nth-child(4) .col__item__icon i {
+    border: 1px solid #F48924;
+    color: #F48924;
+}
+/* why choose us ***end*** */
+/* contact with us ***start** */
+.contact .contact__content .contact__item {
+    margin: auto 2rem;
+}
+/* contact left */
+.contact .contact__content .contact__item p{
+    display: inline-block;
+    padding-right: 5rem;
+}
+.contact .contact__content .contact__item.contact__left{
+    flex-basis: 50%;
+}
+
+/* contact right */
+.contact .contact__content .contact__right {
+    background-color: var(--border-color);
+    color: #ffffff;
+    border-radius: 7px;
+    padding: 0 1rem;
+    line-height: 2.5;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+}
+.contact .contact__content .contact__right a {
+    text-decoration: none;
+    color: white;
+}
+.contact .contact__content .contact__right a p{
+    color: var(--primary-white-background-color);
+    padding-right: 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* contact with us ***end*** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HEADER end*/
+/* CAROUSEL start */
+/* .carousel__section .carousel__corp {
+    padding: 0;
+}
+.carousel__section .carousel__corp .carousel-caption {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background: rgb(63, 58, 100, 0.4);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.carousel__section .carousel__corp .carousel-caption h2 {
+    font-size: 4.0625rem;
+    font-weight: 600;
+    line-height: 72px;
+    color: var(--white-color);
+}
+.carousel__section .carousel__corp .carousel-caption p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 30px;
+    color: var(--white-color);
+}
+.carousel__section .carousel__corp .carousel-caption .btn {
+   color: var(--white-color);
+   background: var(--border-color);
+   padding: 1rem 3rem;
+   width: 200px;
+} */
+
+/* CAROUSEL end */
