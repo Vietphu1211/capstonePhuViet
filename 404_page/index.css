@@ -197,7 +197,7 @@ RIGHT SIDEBAR TOGGLE SECTION
 
 .breadcrumb-bg-about {
     height: 65vh;
-    background-image: url(asset/img/b1.jpg);
+    background-image: url(../asset/img/b1.jpg);
     background-size: cover;
     background-repeat: no-repeat, no-repeat, no-repeat;
     position: relative;
