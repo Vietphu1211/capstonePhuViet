@@ -222,7 +222,7 @@ header .navbar .nav__right .btn__mode {
 header .navbar .nav__right .btn__mode .btn__light{
     display: none;
 }
-
+/* HEADER END */
 /* BREADCRUMB Start */
 .breadcrumb {
     width: 100vw;
@@ -522,6 +522,7 @@ font-size: 2.5rem;
 
 
 /* all your content here */
+/* back to top start */
 .cd-top--is-visible { 
     visibility: visible;
     opacity: 1;
@@ -541,4 +542,37 @@ font-size: 2.5rem;
     position: fixed;
     bottom: 5%;
     right: 1%;
+}
+
+
+/* Responsive start */
+/* Sắp xếp theo nguyên tắc thiết kế first desktop nên dùng max-width */
+/* breakpoint < 1200px: desktop */
+@media (max-width: 1199.98px) {
+    .col__services__item__pic img{
+        /* width: 50%; */
+    }
+}
+
+
+
+/* breakpoint < 992px:Tablets */
+@media (max-width: 991.98px){
+
+
+}
+
+
+
+/* breakpoint < 768px:landscape phone */
+@media (max-width: 767.98px ) {
+
+
+
+}
+/* breakpoint <575px :portrait phone */
+@media (max-width: 575.98px ) {
+
+
+
 }
