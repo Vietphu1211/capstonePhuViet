@@ -952,7 +952,7 @@ section .wave.wave4
 
 /* NEW CSS */
 .new{
-    background-color: #8080800d;
+    background-color: var(--primary-white-background-color);
 }
 .new .new_content{
     padding: 50px 0;
@@ -988,6 +988,13 @@ section .wave.wave4
 }
 .new .new_content .new_card .card_content .card_center{
     padding: 20px;
+
+    /* line-height: 2.4em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: wrap;
+    -webkit-line-clamp: 2; */
+
 }
 .new .new_content .new_card .card_content .card_center p{
     text-align: left;
