@@ -10,6 +10,8 @@
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- Font Boxicon CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
 
   <!-- FontAwesome 6.2.0 CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
@@ -33,12 +35,11 @@
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
 
-
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="./css/stylehomepage.css">
 </head>
 
-<!-- header -->
+<!-- HEADER START -->
 <header class="container-fluid m-2">
   <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between align-item-center">
     <div class="container">
@@ -113,17 +114,103 @@
   </nav>
 
 </header>
-<!-- Carousel -->
-<section class="carousel"></section>
+<!-- HEADER END -->
+<section></section>
+<!-- CAROUSEL START -->
+<section class="carousel container-fluid pb-5 mb-5">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="2000">
+        <img src="./asset/img/b1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel__overlay__pic">
+          <div class="carousel-caption container d-none d-md-block">
+            <h2 class="heading2__light">For those who believe in leaving a mark</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem alias sit, excepturi error exercitationem eos officia consectetur ullam unde molestiae!</p>
+            <button class="btn__corp">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item " data-bs-interval="4000">
+        <img src="./asset/img/b2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel__overlay__pic">
+          <div class="carousel-caption container d-none d-md-block">
+            <h2 class="heading2__light">Digital transformation driven by technology</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maiores vitae possimus quasi? Veniam non similique veritatis impedit? Blanditiis, asperiores culpa!</p>
+            <button class="btn__corp">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item " data-bs-interval="6000">
+        <img src="./asset/img/b3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel__overlay__pic">
+          <div class="carousel-caption container d-none d-md-block">
+            <h2 class="heading2__light">Embracing success do our best, need best advice</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident ea aliquam repudiandae quaerat sit sapiente, reiciendis cupiditate iste odio quasi!</p>
+            <button class="btn__corp">
+              Get Started
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item " data-bs-interval="8000">
+        <img src="./asset/img/b4.jpg" class="d-block w-100" alt="...">
+        <div class="carousel__overlay__pic">
+          <div class="carousel-caption container d-none d-md-block">
+            <h2 class="heading2__light">For those who believe in leaving a mark</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem officiis incidunt exercitationem assumenda, asperiores cum doloremque ducimus ipsum? Asperiores, doloribus.</p>
+            <button class="btn__corp">
+              Learn More
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<section class="about" id="about">
+    <!-- btn previous -->
+    <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden"><i class="fa-solid fa-arrow-left"></i></span>
+    </button> -->
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev"><i class="fa-solid fa-arrow-left"></i>
+      <span class="carousel-control-prev-icon d-none" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+    <!-- btn next -->
+    <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+      <span class="visually-hidden"><i class="fa-solid fa-arrow-right"></i></span>
+    </button> -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next"><i class="fa-solid fa-arrow-right"></i>
+      <span class="carousel-control-next-icon d-none" aria-hidden="true"></span>
+      <span class="visually-hidden"></span>
+    </button>
+  </div>
+</section>
+<!-- CAROUSEL END -->
+
+  <!-- tạo hình sóng start -->
+  <section class="wave__corp">
+      <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+  </section>
+  <!-- tạo hình sóng end -->
+
+<!-- ABOUT START -->
+  <section class="about container-fluid" id="about">
   <div class="container">
-    <div class="about_content d-flex justify-content-between">
-      <div class="about_left">
+    <div class="about_content d-flex justify-content-between align-items-center">
+      <div class="about_left p-5">
         <span>ABOUT US</span>
         <h2>We make the best strategies for you, Enhancing your success</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br> tempor incididunt ut labore et
-          dolore magna aliqua. Ut enim ad minim veniam,<br> quis nostrud ullamco laboris nisi ut ex ea.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod s tempor incididunt ut labore et
+          dolore magna aliqua. Ut enim ad minim veniam, quis nostrud ullamco laboris nisi ut ex ea.</p>
         <ul>
           <li>
             <a href="">
@@ -145,7 +232,7 @@
           </li>
         </ul>
       </div>
-      <div class="about_right row">
+      <div class="about_right p-5 row">
         <!-- Hình ảnh bên trái -->
         <div class="about_haTrai col-md-6">
           <img src="./asset/img/a.jpg" alt="Hình ảnh bên trái" class="img-fluid">
@@ -169,7 +256,9 @@
     </div>
   </div>
 </section>
+<!-- ABOUT END -->
 
+<!-- CHALLENGES START -->
 <section class="challenges">
   <div class="container">
     <div class="challenges_content d-flex justify-content-sm-start">
@@ -221,7 +310,9 @@
     </div>
   </div>
 </section>
+<!-- CHALLENGES END -->
 
+<!-- SERVICE START -->
 <section class="service">
   <div class="container">
     <div class="service_content text-center p-5">
@@ -255,7 +346,9 @@
     </div>
   </div>
 </section>
+<!-- SERVICE END -->
 
+<!-- GALLERY START -->
 <section class="gallery">
   <div class="container">
     <div class="gallery_content text-center">
@@ -361,7 +454,9 @@
     </div>
   </div>
 </section>
+<!-- GALLERY END -->
 
+<!-- SUCESS START -->
 <section class="success">
   <div class="container">
     <div class="success_content d-flex justify-content-start">
@@ -416,7 +511,9 @@
       </div>
     </div>
 </section>
+<!-- SUCESS END -->
 
+<!-- FEEDBACK START -->
 <section class="feedback">
   <div class="container">
     <div class="feedback_content text-center">
@@ -489,7 +586,9 @@
     </div>
   </div>
 </section>
+<!-- FEEDBACK END -->
 
+<!-- NEWS START -->
 <section class="new">
   <div class="container">
     <div class="new_content">
@@ -510,7 +609,7 @@
             <hr>
             <div class="card_bottom">
               <a href="">
-                <img src="./asset/img/328cc1f23e4a3b73aa60ee6ced1897a1 (1).jpeg" alt="">
+                <img src="./asset/img/blog2.jpg" alt="">
               </a>
               <div class="card_layout">
                 <span>by</span>
@@ -525,7 +624,7 @@
         <div class="card_content">
           <div class="card_top">
             <a href="">
-              <img src="./asset/img/blog2.jpg" alt="">
+              <img src="./asset/img/blog3.jpg" alt="">
             </a>
           </div>
           <div class="card_background">
@@ -578,7 +677,9 @@
     </div>
   </div>
 </section>
+<!-- NEWS END -->
 
+<!-- TOGETHER START -->
 <section class="together">
   <div class="container">
     <div class="together_content text-center text-white">
@@ -594,7 +695,9 @@
   </div>
 
 </section>
+<!-- TOGETHER END -->
 
+<!-- FOOTER START -->
 <footer>
   <div class="container">
     <div class="footer_top d-flex justify-content-start text-white">
@@ -660,13 +763,17 @@
     </div>
   </section>
 </footer>
-
+<!-- FOOTER END -->
 
 <!-- all your content here -->
 <a href="#" class="cd-top text-replace js-cd-top">
   <i class="fa-solid fa-angle-up"></i>
 </a>
 
+
+
+
+<!-- LIBRARY OF JAVASCRIPT TO BE USED FOR THE THEME ....HERE -->
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
   integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -709,10 +816,9 @@
   });
 </script>
 
-
-
 <!-- MAIN JAVASCIPT FILE -->
 <script src="./index.js"></script>
+
 </body>
 
 </html>
