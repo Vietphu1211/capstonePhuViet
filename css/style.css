@@ -1419,7 +1419,7 @@ footer .footer_top .footer_contact h3, footer .footer_top .footer_cate h3, foote
 .together .together_content form button{
     padding: 0 15px;
 }
-}
+
 /* Make responsive for lg 768-881*/
 @media (max-width: 991.98px){
 
@@ -1497,7 +1497,7 @@ footer .footer_top .footer_contact h3, footer .footer_top .footer_cate h3, foote
 footer .footer_top .footer_contact ul, footer .footer_top .footer_cate ul, footer .footer_top .footer_meta ul{
     padding: 0;
 }
-}
+
 
 
 
@@ -1514,3 +1514,4 @@ footer .footer_top .footer_contact ul, footer .footer_top .footer_cate ul, foote
 @media (max-width: 575.98px){
     
 }
+
