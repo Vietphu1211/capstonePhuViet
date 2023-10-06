@@ -18,3 +18,14 @@ document.getElementById('btnCloseOverlaySearch').addEventListener('click', funct
     // đã gán biến cho overlaySearch ở trên với biến toàn cục nên có thể sử dụng
     searchOverlay.style.display = 'none';
 });
+
+
+// Thông báo điền form newsletter
+alert(hello);
+document.getElementById('btnNewletters').onclick = function (){
+    var giaTriEmail = document.getElementById('nhapEmailNewsletter').value;
+    console.log(giaTriEmail);
+    alert(giaTriEmail);
+    
+
+};

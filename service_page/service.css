@@ -276,14 +276,31 @@ header .navbar .nav__right .btn__mode .btn__light{
 .services {
     background-color:#F7F7F7;
 }
+.services .services__content .services__bot .row {
+    /* flex-direction: column; */
+}
 .services .services__content .services__bot .row .col__item {
     width: calc(50% - 2rem);
     margin: 1rem 1rem;
     background-color: var(--primary-white-background-color);
     /* border: 1px solid; */
     padding:0;
-    width: 628px;
+    /* width: 47%; */
     min-height: 420px;
+}
+.services .services__content .services__bot .row .col__item.col__services__item__right {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.services .services__content .services__bot .row .col__item.col__services__item__right img {
+    box-shadow: 0 0 3px 0 rgba(56, 56, 56, 0.5);
+}
+.services .services__content .services__bot .row .col__item .col__services__item__pic {
+    width: 102%;
 }
 .services .services__content .services__bot .row .col__item.col__services__item__left {
     display: flex;
@@ -417,6 +434,7 @@ font-size: 2.5rem;
 }
 .values .values__content__bot .col__values__item h3 {
     cursor: pointer;
+    font-weight: 600;
 }
 .values .values__content__bot .col__values__item h3:hover {
     color: var(--hover-green-color);
@@ -426,83 +444,88 @@ font-size: 2.5rem;
 /* code footer thêm từ Sang DEV3 */
 
 
-/* FOOTER CSS */
-.footer{
+/* FOOTER Start */
+footer{
     background-color: #151421;
 }
-.footer .footer_top{
-    padding: 30px 0;
+footer .footer_top{
+    padding: 30px 60px;
 }
-.footer .footer_top .footer_logo .footer_create_logo i{
+footer .footer_top .footer_logo .footer_create_logo i{
     font-size: 30px;
     color: green;
     padding-bottom: 20px;
 }
-.footer .footer_top a{
+footer .footer_top a{
     text-decoration: none;
     color: #97a1a9;
+    transition: all 0.5s;
 }
-.footer .footer_top h3{
+footer .footer_top a:hover{
+    color: white;
+}
+footer .footer_top h3{
     font-weight: 600;
 }
-.footer .footer_top ul{
+footer .footer_top ul{
     list-style: none;
 }
 
-.footer .footer_top .footer_logo .footer_create_logo a {
+footer .footer_top .footer_logo .footer_create_logo a {
     color: white;
     padding-left: 10px;
 }
-.footer .footer_top .footer_logo .footer_create_logo a p:first-child{
+footer .footer_top .footer_logo .footer_create_logo a p:first-child{
     font-size: 1.8rem;
     margin: 0;
     font-weight: 600;
     color: white;
 }
-.footer .footer_top .footer_logo .footer_create_logo a p:last-child{
+footer .footer_top .footer_logo .footer_create_logo a p:last-child{
     font-size: 0.8rem;
     margin: 0;
     font-weight: 600;
     color: white;
 }
-.footer .footer_top .footer_logo p{
+footer .footer_top .footer_logo p{
     color: #97a1a9;
     margin: 20px 0;
 }
-.footer .footer_top .footer_logo .logo_social a i{
+footer .footer_top .footer_logo .logo_social a i{
     padding-right: 10px;
 }
-.footer .footer_top .footer_contact{
+footer .footer_top .footer_contact{
     padding-left: 50px;
 }
-.footer .footer_top .footer_contact h3{
+footer .footer_top .footer_contact h3{
     padding: 5px 0px 0px 50px;
 }
-.footer .footer_top .footer_contact ul{
+footer .footer_top .footer_contact ul{
     padding: 15px 0px 0px 50px;
 }
-.footer .footer_top .footer_contact ul li{
+footer .footer_top .footer_contact ul li{
     color: #97a1a9;
     line-height: 30px;
 }
-.footer .footer_top .footer_cate h3{
+footer .footer_top .footer_cate h3{
     padding: 5px 0px 0px 50px;
 }
-.footer .footer_top .footer_cate ul{
+footer .footer_top .footer_cate ul{
     padding: 10px 0px 0px 50px;
 }
-.footer .footer_top .footer_cate ul li{
+footer .footer_top .footer_cate ul li{
     line-height: 30px;
 }
-.footer .footer_top .footer_meta h3{
+footer .footer_top .footer_meta h3{
     padding: 5px 0px 0px 150px;
 }
-.footer .footer_top .footer_meta ul{
+footer .footer_top .footer_meta ul{
     padding: 10px 0px 0px 150px;
 }
-.footer .footer_top .footer_meta ul li{
+footer .footer_top .footer_meta ul li{
     line-height: 30px;
 }
+/* Footer end */
 
 /* COPY RIGHT CSS */
 .copyright{
@@ -549,8 +572,11 @@ font-size: 2.5rem;
 /* Sắp xếp theo nguyên tắc thiết kế first desktop nên dùng max-width */
 /* breakpoint < 1200px: desktop */
 @media (max-width: 1199.98px) {
-    .col__services__item__pic img{
-        /* width: 50%; */
+    .solution .solution__content .col__item {
+        flex-direction: column;
+    }
+    .solution__cate__item__text .heading3__dark {
+        white-space: nowrap;
     }
 }
 
