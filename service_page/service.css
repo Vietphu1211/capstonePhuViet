@@ -620,6 +620,9 @@ footer .footer_top .footer_meta ul li{
 
 /* breakpoint 768px <= 991px:Tablets */
 @media (max-width: 991.98px){
+    a.navbar-brand.nav__left.d-flex {
+        padding-top: 1rem;
+    }
     .services .services__content .services__bot .row .col__item {
         width: 100%;   
     }
