@@ -212,14 +212,17 @@ ul.navbar-nav {
 #searchOverlay {
     /* display: none; */
     position: fixed;
-    bottom: 20%;
-    left: 30%;
+    bottom: -20%;
+    left: 12%;
     width: 1700px;
     height: 1700px;
     background: rgb(0, 115, 44, 0.5);
     border-radius: 50%;
     transform: scale(0);
     transition: all 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* *** CSS CHO OVERLAY SEARCH **************END */
 
@@ -613,9 +616,12 @@ footer .footer_top .footer_meta ul li{
     .values .values__content__bot .col__values__item h3 {
         white-space: nowrap;
     }
+    .navbar-collapse .nav__right #searchOverlay {
+        bottom: 0%;
+        left: -27%;
 
 }
-
+}
 
 
 /* breakpoint 768px <= 991px:Tablets */
@@ -659,6 +665,13 @@ footer .footer_top .footer_meta ul li{
         width: 100%;
         margin: 1.3rem 1.3rem;
     }
+/* position overlay search button */
+    .navbar-collapse .nav__right #searchOverlay {
+    bottom: 0%;
+    left: -56%;
+}
+
+
     /* tùy biến cho nút dropdown menu */
     #btnMenu {
         /* border: 2px solid rgb(255, 255, 255, 0.5); */
@@ -666,25 +679,30 @@ footer .footer_top .footer_meta ul li{
         top: 20%;
         right: 6%;
         background: var(--border-color);
+        outline: none !important;
     }
-    #btnMenu .navbar-toggler-icon i.fa-solid.fa-bars {
-        color: rgb(255, 255, 255, 1);
-        font-size: 2rem;
+    #btnMenu:focus{
+        border: none;
     }
-    /* background cho content của menu dropdown */
-    div#navbarNav {
-        background: rgb(0, 0, 0, 0.7);
-        height: 350px;
-    }
-    ul.navbar-nav {
-        flex-direction: column;
-        justify-content: space-around;
-        height: 100%;
-    }
-    /* thay doi flex theo cot cho menu dropdown cho vung kich thuoc nay */
-    .navbar div#navbarNav {
-        flex-direction: column;
-    }
+
+#btnMenu .navbar-toggler-icon i.fa-solid.fa-bars {
+    color: rgb(255, 255, 255, 1);
+    font-size: 2rem;
+}
+/* background cho content của menu dropdown */
+div#navbarNav {
+    background: rgb(0, 0, 0, 0.7);
+    height: 350px;
+}
+ul.navbar-nav {
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+/* thay doi flex theo cot cho menu dropdown cho vung kich thuoc nay */
+.navbar div#navbarNav {
+    flex-direction: column;
+}    
 }
 
 
@@ -707,6 +725,23 @@ footer .footer_top .footer_meta ul li{
     }
     .cd-top i {
         right: 3% !important;
+    }
+    /* position overlay search button */
+    #searchOverlay {
+        bottom: 0%;
+        left: -60%;
+    }
+    #searchOverlay form.form-inline.d-flex.position-fixed {
+        right: 50%;
+        width: 400px;
+    }
+    header .navbar .nav__right #searchOverlay .form-inline input.form-control.mr-sm-2#inputSearchWidth{
+        width: 80% !important;
+    }
+    header .navbar .nav__right #searchOverlay button#btnCloseOverlaySearch img {
+        bottom: 25%;
+        right: 49%;
+    
     }
 
 }
@@ -803,13 +838,44 @@ footer .footer_top .footer_meta ul li{
         padding: 30px 0;
     }
 
+
+    /* position overlay search button */
+    #searchOverlay form.form-inline.d-flex.position-fixed{
+        width: 300px;
+    }
+    .navbar-collapse .nav__right #searchOverlay {
+    left: -115%;
+    }
 }
 
-/* Nút bấm dropdown Menu */
-/* header .navbar .nav__midle{
-    display: block !important;
-    background: rgb(0, 0, 0, 0.8);
-    width: 100vw;
-} */
+/* responsive 320 px <= 414px */
 
-/* Css nút menu */
+@media (max-width:413.98px) {
+    header .navbar .nav__left .nav__brand__icon .fa-align-right{
+        font-size: 1.5rem;
+    }
+    header .navbar .nav__left h2 {
+        font-size: 1rem;
+        margin-left: 1.2rem;
+    }
+    #btnMenu .navbar-toggler-icon i.fa-solid.fa-bars {
+        font-size: 1.5rem;
+    }
+    span.navbar-toggler-icon{
+        width: 1em;
+        height: 1em;
+        vertical-align:inherit;
+    }
+
+
+    /* position overlay search button */
+    #searchOverlay form.form-inline.d-flex.position-fixed {
+
+    right: 60%;
+    }
+    header .navbar .nav__right #searchOverlay button#btnCloseOverlaySearch img {
+        right: 60%;
+    }
+}
+
+
