@@ -18,3 +18,16 @@ document.getElementById('btnCloseOverlaySearch').addEventListener('click', funct
     // đã gán biến cho overlaySearch ở trên với biến toàn cục nên có thể sử dụng
     searchOverlay.style.display = 'none';
 });
+
+// bấm vào menu để thả nav xuống
+var btnMenu = document.getElementById('btnMenu');
+var contentMenu = document.getElementById('navbarNav');
+
+btnMenu.addEventListener('click', function() {
+    if(navbarNav.classList.contains('d-none')) {
+        contentMenu.classList.remove('d-none')
+    } else {
+        contentMenu.classList.add('d-none')
+    }
+});
+
