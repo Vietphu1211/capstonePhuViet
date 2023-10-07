@@ -28,6 +28,8 @@ html,
 body {
     font-size: 16px;
     font-family: 'Jost', sans-serif;
+    /* ẩn thanh cuộn ngang */
+    overflow-x: hidden;
 }
 
 /* cài fontsize ,fontweight cho h2,h3,h4 va p */
@@ -132,6 +134,9 @@ header .navbar .nav__left h2 span {
     color: var(--white-color); 
 }
 /* nav menu, nav midle ===================*/
+#btnMenu .span.navbar-toggler-icon i.fa-solid.fa-bars {
+    color: white;
+}
 header .navbar .nav__midle {
 color: var(--white-color);
 flex-direction: column;
@@ -196,6 +201,14 @@ header .navbar .nav__right #searchOverlay button#btnCloseOverlaySearch img {
     right: 30%;
 }
 /* Css overlay of btnSearch */
+.navbar div#navbarNav{
+    flex-direction: row;
+    justify-content: space-around;
+}
+ul.navbar-nav {
+    flex-basis: 70%;
+    justify-content: center;
+}
 #searchOverlay {
     /* display: none; */
     position: fixed;
@@ -225,16 +238,17 @@ header .navbar .nav__right .btn__mode .btn__light{
 /* HEADER END */
 /* BREADCRUMB Start */
 .breadcrumb {
-    width: 100vw;
     margin-bottom: 0;
 }
 .breadcrumb__overlay {
     width: 100%;
-    max-height: 400px;
+    height: 400px;
     overflow: hidden;
 }
 .breadcrumb__overlay img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .breadcrumb__overlay::after {
     content: "";
@@ -254,6 +268,7 @@ header .navbar .nav__right .btn__mode .btn__light{
     align-items: center;
     justify-content: center;
     margin: auto;
+    padding: 0;
     height: 400px;
     color: var(--white-color);
 }
@@ -275,6 +290,7 @@ header .navbar .nav__right .btn__mode .btn__light{
 
 .services {
     background-color:#F7F7F7;
+    padding: 0;
 }
 .services .services__content .services__bot .row {
     /* flex-direction: column; */
@@ -300,7 +316,7 @@ header .navbar .nav__right .btn__mode .btn__light{
     box-shadow: 0 0 3px 0 rgba(56, 56, 56, 0.5);
 }
 .services .services__content .services__bot .row .col__item .col__services__item__pic {
-    width: 102%;
+    width: 100%;
 }
 .services .services__content .services__bot .row .col__item.col__services__item__left {
     display: flex;
@@ -341,6 +357,9 @@ header .navbar .nav__right .btn__mode .btn__light{
 /* services start */
 
 /* solution start */
+.solution {
+    padding: 0;
+}
 .solution .solution__content .col__item {
     align-items: flex-start;
     background: #F8F9FA;
@@ -371,6 +390,9 @@ font-size: 2.5rem;
 /* form start */
 .contact{
     background: linear-gradient(to right, rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)), url(./img/b4.jpg);
+    background-attachment: fixed;
+    padding: 0;
+
 }
 /* coll-left */
 .contact .contact__content .col__left p{
@@ -417,24 +439,34 @@ font-size: 2.5rem;
 /* form end */
 /* ******************** */
 /* values start */
-.values {
+section.values {
     background: var(--secondary-white-background-color);
+
+    padding: 0;
 }
 /* values gridbox */
 .values .values__content__bot .col__values__item {
     background: var(--primary-white-background-color);
-    /* border: 1px solid #000; */
-    margin: 0 0.7rem;
-    width: calc(33.33% - 2.1rem);
-    box-shadow: 0 0 2px 0 rgba(37, 37, 37, 0.5);
+    border-radius: 10px;
+    margin: 0 1.3rem;
+    width: calc(33.33% - 2.6rem);
+    box-shadow: 0 0 10px 3px rgba(163, 163, 163, 0.5);
     transition: var(--transition-duration);
 }
 .values .values__content__bot .col__values__item:hover {
     transform: translateY(-15px);
+    box-shadow: 5px 15px 10px 3px rgba(163, 163, 163, 0.5)
 }
 .values .values__content__bot .col__values__item h3 {
     cursor: pointer;
     font-weight: 600;
+}
+/* không để chữ tràn quá dòng thứ 3, tránh việc cột dài, cột ngắn */
+.values .values__content__bot .col__values__item p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
 }
 .values .values__content__bot .col__values__item h3:hover {
     color: var(--hover-green-color);
@@ -495,32 +527,32 @@ footer .footer_top .footer_logo .logo_social a i{
     padding-right: 10px;
 }
 footer .footer_top .footer_contact{
-    padding-left: 50px;
+    /* padding-left: 50px; */
 }
 footer .footer_top .footer_contact h3{
-    padding: 5px 0px 0px 50px;
+    padding: 0;
 }
 footer .footer_top .footer_contact ul{
-    padding: 15px 0px 0px 50px;
+    padding: 0;
 }
 footer .footer_top .footer_contact ul li{
     color: #97a1a9;
     line-height: 30px;
 }
 footer .footer_top .footer_cate h3{
-    padding: 5px 0px 0px 50px;
+    padding: 0;
 }
 footer .footer_top .footer_cate ul{
-    padding: 10px 0px 0px 50px;
+    padding: 0;
 }
 footer .footer_top .footer_cate ul li{
     line-height: 30px;
 }
 footer .footer_top .footer_meta h3{
-    padding: 5px 0px 0px 150px;
+    padding: 0;
 }
 footer .footer_top .footer_meta ul{
-    padding: 10px 0px 0px 150px;
+    padding: 0;
 }
 footer .footer_top .footer_meta ul li{
     line-height: 30px;
@@ -570,7 +602,7 @@ footer .footer_top .footer_meta ul li{
 
 /* Responsive start */
 /* Sắp xếp theo nguyên tắc thiết kế first desktop nên dùng max-width */
-/* breakpoint < 1200px: desktop */
+/* breakpoint 992px <= 1199px: desktop */
 @media (max-width: 1199.98px) {
     .solution .solution__content .col__item {
         flex-direction: column;
@@ -578,27 +610,203 @@ footer .footer_top .footer_meta ul li{
     .solution__cate__item__text .heading3__dark {
         white-space: nowrap;
     }
+    .values .values__content__bot .col__values__item h3 {
+        white-space: nowrap;
+    }
+
 }
 
 
 
-/* breakpoint < 992px:Tablets */
+/* breakpoint 768px <= 991px:Tablets */
 @media (max-width: 991.98px){
+    .services .services__content .services__bot .row .col__item {
+        width: 100%;   
+    }
+    .services__bot .servies__grid .row .col__services__item__right:nth-child(2){
+        order: -1;
+    }
+    .solution .solution__content .solution__cate__grid.row{
+        flex-direction: row;
+    }
+    .solution .solution__content .col__item {
+        width: 45.5%;
+    }
+    .contact .contact__content .row.contact__grid {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact .contact__content .row.contact__grid .col__item  {
+        width: 80%;
+    }
+    section.values{
+        margin: 1.5rem auto;
+    }
+    .values .values__content .values__content__bot .row {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
-
+    }
+    .values .values__content .values__content__bot {
+        margin: 0 3rem !important;
+    }
+    .values .values__content .values__content__bot .row .col__values__item  {
+        width: 100%;
+        margin: 1.3rem 1.3rem;
+    }
+    /* tùy biến cho nút dropdown menu */
+    #btnMenu {
+        /* border: 2px solid rgb(255, 255, 255, 0.5); */
+        position: absolute;
+        top: 20%;
+        right: 6%;
+        background: var(--border-color);
+    }
+    #btnMenu .navbar-toggler-icon i.fa-solid.fa-bars {
+        color: rgb(255, 255, 255, 1);
+        font-size: 2rem;
+    }
+    /* background cho content của menu dropdown */
+    div#navbarNav {
+        background: rgb(0, 0, 0, 0.7);
+        height: 350px;
+    }
+    ul.navbar-nav {
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+    }
+    /* thay doi flex theo cot cho menu dropdown cho vung kich thuoc nay */
+    .navbar div#navbarNav {
+        flex-direction: column;
+    }
 }
 
 
 
-/* breakpoint < 768px:landscape phone */
+/* breakpoint 575px <= 767px:landscape phone */
 @media (max-width: 767.98px ) {
-
-
+    .solution .solution__content .col__item{
+        width: 44%;
+        padding: 1rem !important;
+    }
+    .solution .solution__content .col__item .sub__heading{
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .contact .contact__content .row.contact__grid .col__item.col__left{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .cd-top i {
+        right: 3% !important;
+    }
 
 }
-/* breakpoint <575px :portrait phone */
-@media (max-width: 575.98px ) {
-
-
+/* breakpoint 414px <= 574px :portrait phone */
+@media (max-width: 574.98px ) {
+    
+    header.container-fluid {
+        background: rgb(0, 0, 0, 1);
+        margin: 0 !important;
+    }
+    a.navbar-brand.nav__left.d-flex {
+        padding-top: 1rem;
+    }
+    .services .services__content .services__top {
+        margin-top: 5rem;
+    }
+    .breadcrumb {
+        display: none;
+    }
+    .services .services__content .services__bot .row .col__item .col__services__item__pic {
+        height: 100%;
+    }
+    .services .services__content .services__bot .row .col__item .col__services__item__pic  img {
+        height: 100%;
+        border-radius: 0;
+    }
+    .services .services__content .services__bot .row .col__item.col__services__item__right{
+        margin: 0;
+    }
+    .services .services__content .services__bot .row .col__item.col__services__item__left {
+        padding: 2rem;
+    }
+    .services .services__content .services__bot .row .col__item.col__services__item__left p {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .solution .solution__content .col__item {
+        width: 94.5%;
+        padding-bottom: 0 !important;
+        
+    }
+    .solution .solution__content .col__item .solution__cate__item__icon {
+        margin: auto;
+        text-align: center;
+    }
+    .solution .solution__content .col__item .solution__cate__item__text p {
+        text-align: center;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    .solution .solution__content .solution__cate__item__text a .heading3__dark {
+        text-align: center;
+    }
+    section.contact.container-fluid {
+        padding-bottom: 0 !important;
+    }
+    .contact .contact__content .col__left h2.heading2__light {
+        font-size: 1.8rem !important;
+        text-align: center !important;
+    }
+    .contact .contact__content .col__item.col__left p:nth-of-type(1) {
+        text-align: center;
+    }
+    .contact .contact__content .col__item.col__left .col__item__info__text p:nth-of-type(1) {
+        text-align: left;
+    }
+    .contact .contact__content .col__right h2 {
+        text-align: center !important;
+        font-size: 1.8rem !important;
+    }
+    .contact .contact__content .row.contact__grid .col__item.col__right {
+        width: 100%;
+        border-radius: 0;
+        padding: 0 !important;
+        text-align: center;
+        height: 565px;
+    }
+    .values .values__content  .values__content__top{
+        margin: 0 auto !important;
+    } 
+    .values .values__content .values__content__bot .row .col__values__item {
+        width: 100%;
+        margin: 1.3rem 0.5rem;
+        padding: 1rem 1rem !important;
+    }
+    .heading2__dark {
+        font-size: 1.8rem;
+    }
+    footer .footer_top{
+        padding: 30px 0;
+    }
 
 }
+
+/* Nút bấm dropdown Menu */
+/* header .navbar .nav__midle{
+    display: block !important;
+    background: rgb(0, 0, 0, 0.8);
+    width: 100vw;
+} */
+
+/* Css nút menu */
