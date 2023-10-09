@@ -7,6 +7,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+
+
+  <!-- Fancybox -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+/>
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
@@ -29,10 +36,10 @@
 </head>
 
 <body>
-  <!-- Code of Dev1 star  -->
-  <header class="container-fluid">
+  <!-- header ****start-->
+  <header class="container-fluid m-2">
     <nav class="navbar navbar-expand-lg bg-body-tertiary d-flex justify-content-between align-item-center">
-      <div class="container">
+      <div class="container container-sm container-md container-lg container-xl">
         <!-- Nav-brand -->
         <a class="navbar-brand nav__left d-flex" href="#">
           <div class="nav__brand__icon">
@@ -41,12 +48,12 @@
           <h2>Corp Vision <br /> <span>Vision to your future</span></h2>
         </a>
         <!-- Btn khi xem ở breakpoint nhỏ hơn -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <button id="btnMenu" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+          <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
         </button>
         <!-- Navbar menu -->
-        <div class="collapse navbar-collapse nav__midle d-flex" id="navbarNav">
+        <div class="collapse navbar-collapse nav__midle d-none d-flex" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -71,179 +78,204 @@
               <a class="nav-link" href="#">Contact</a>
             </li>
           </ul>
+          <div class="nav__right d-flex justify-content-between">
+            <!-- Btn search -->
+            <button class="btn__search border-0" id="btnSearch">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+
+            <!-- make a overlay of btnSearch ****start-->
+            <div id="searchOverlay">
+              <!-- use css to add div overlay for button when visitor click into btnSearch -->
+              <button id="btnCloseOverlaySearch">
+                <img src="./img/close.png" alt="">
+              </button>
+              <form class="form-inline d-flex position-fixed">
+                <input id="inputSearchWidth" class="form-control mr-sm-2" type="search"
+                  placeholder="Type content to find something" aria-label="Search">
+                <button class="btn my-2 my-sm-0 m-3" type="submit">Search</button>
+              </form>
+              <!-- make a overlay of btnSearch ****End-->
+            </div>
+            <!-- Btn light & dark mode -->
+            <div>
+              <button class="btn__mode">
+                <i class='bx bx-moon btn__dark active'></i>
+                <i class='bx bx-sun btn__light'></i>
+              </button>
+            </div>
+          </div>
         </div>
         <!-- Btn tìm kiếm và dark,light mode -->
-        <div class="nav__right d-flex justify-content-between">
-          <!-- Btn search -->
-          <div class="btn__search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-          <!-- Btn light & dark mode -->
-          <div>
-            <button class="btn__mode">
-              <i class='bx bx-moon btn__dark active'></i>
-              <i class='bx bx-sun btn__light'></i>
-            </button>
-          </div>
-        </div>
+
       </div>
     </nav>
 
   </header>
+  <!-- header ****end -->
 
   <!-- Breadcrumb start-->
-
-  <div class="breadcrumb container-fluid">
+  <section class="breadcrumb container-fluid">
     <div class="breadcrumb__overlay">
-      <img src="./img/b1.jpg" alt="hinh background 1">
+      <img src="./img/bg1.jpg" alt="hinh background 1">
     </div>
     <div class="breadcrumb__text container-fluid">
-      <h2>About Us</h2>
-      <p>Experience you can trust, service you can count on.</p>
+      <h2 class="fs-1 fs-2">About Us</h2>
+      <p class="fs-1 fs-2 fs-3 fs-4 fs-5 fs-6">We work with bold brands that we believe in</p>
     </div>
-  </div>
-
+  </section>
   <!-- Breadcrumb ***end***-->
+
   <!-- About Our Company ***start***-->
   <section> </section>
-  <section>
-  <div class="container about__company">
-    <div class="row row__about__top">
-      <div class="col-6 col__left">
-        <div class="col__left__content">
-          <img src="./img/about2.jpg" alt="Về chúng tôi">
-          <div class="background__elip"></div>
-          <div class="col__left__title">
-            <div class="d-flex">
-              <span>25+</span>
-              <p>Years of <br>Experience.</p>
+  <section class="about__company">
+    <div class="container container-sm container-md container-lg container-xl container-xxl">
+      <div class="row row__about__top">
+        <div class="col__left col-12 col-md-12 col-lg-6">
+          <div class="col__left__content">
+            <img src="./img/about2.jpg" alt="Về chúng tôi">
+            <div class="background__elip"></div>
+            <div class="col__left__title">
+              <div class="d-flex">
+                <span>25+</span>
+                <p>Years of <br>Experience.</p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <div class="col-6 col__right">
-        <span>ABOUT OUR COMPANY</span>s
-        <h2 class="heading2__dark">We are the next generation of the business world, creative solutions</h2>
-        <h4 class="heading4__dark">Over 25 years, We complete every project with extra care as customer needs.</h4>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, rerum cupiditate modi aliquid excepturi
-          repudiandae iste itaque temporibus repellat porro debitis possimus dolorum voluptatibus! Optio voluptas sit
-          praesentium saepe iure possimus est accusantium natus neque.</p>
-        <button class="btn btn__corp" id="btnCorp">
-          Read More
-        </button>
-        <button class="btn__video">
-          <i class='bx bx-right-arrow'></i>
-        </button>
-      </div>
-    </div>
-  </div>
-  <div class="container value__company">
-    <div class="row row__about__bot">
-      <div class="col-4 col-item">
-        <i class="fa fa-xing" aria-hidden="true"></i>
-        <h3 class="heading3__dark">
-          Perfect Design
-        </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, praesentium.</p>
-      </div>
-      <div class="col-4 col-item">
-        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-        <h3 class="heading3__dark">
-          Carefully Planned
-        </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, praesentium.</p>
-      </div>
-      <div class="col-4 col-item">
-        <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-        <h3 class="heading3__dark">
-          Smartly Execute
-        </h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident, praesentium.</p>
+        <div class="col__right col-12 col-md-12 col-lg-6">
+          <span class="fs-3 fs-4">ABOUT OUR COMPANY</span>
+          <h2 class="heading2__dark fs-1 fs-2">We are the next generation of the business world, creative solutions</h2>
+          <h4 class="heading4__dark">Over 25 years, We complete every project with extra care as customer needs.</h4>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, rerum cupiditate modi aliquid excepturi
+            repudiandae iste itaque temporibus repellat porro debitis possimus dolorum voluptatibus! Optio voluptas sit
+            praesentium saepe iure possimus est accusantium natus neque.</p>
+          <div class="btn__flex1 d-flex align-items-center">
+            <button class="btn btn__corp" id="btnCorp">
+              Read More
+            </button>
+            <a data-fancybox="gallery" data-caption="Video about us" data-src="https://www.youtube.com/watch?v=9MJpfcD89DA" class="btn__video">
+              <i class='bx bx-right-arrow'></i>
+            </a>
+          </div>
+          
+        </div>
       </div>
     </div>
-  </div>
+    <!-- value company  -->
+    <div class="container value__company">
+      <div class="row row__about__bot d-flex justify-content-center align-items-center">
+        <!-- grid - column 1 -->
+        <div class="col-4 col__item">
+          <i class="fa-brands fa-slack"></i>
+          <div class="col__item__text">
+            <h3 class="heading3__dark">
+              Perfect Design
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, impedit ducimus pariatur quibusdam eius iste adipisci deserunt consequatur ut error!</p>
+          </div>   
+        </div>
+        <!-- grid - column 2 -->
+        <div class="col-4 col__item">
+          <i class="fa-brands fa-algolia"></i>
+          <div class="col__item__text">
+            <h3 class="heading3__dark">
+              Carefully Planned
+            </h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum minus numquam veniam voluptatum corrupti consequuntur odit. Quaerat delectus explicabo vel!</p>
+          </div>
+        </div>
+         <!-- grid - column 3 -->
+        <div class="col-4 col__item">
+          <i class="fa-brands fa-stack-overflow"></i>
+          <div class="col__item__text">
+            <h3 class="heading3__dark">
+              Smartly Execute
+            </h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat amet laboriosam blanditiis quaerat magnam id autem perferendis provident sapiente obcaecati.</p>
+          </div>         
+        </div>
+      </div>
+    </div>
   </section>
   <!-- About Our Company ***end***-->
+
   <!--web design and digital marketing ***start***-->
   <section> </section>
-<section>
-  <div class="number__corp container-fluid">
-    <div class="number__corp__content container">
-      <div class="row">
-        <div class="col-6 col__left">
-          <div class="col__left__top">
-            <span class="sub__heading">WEB DESIGN AND DIGITAL MARKETING</span>
-            <h2 class="heading2__dark">
-              We think strategy, UX design, and web development
-            </h2>
-          </div>
-          <div class="col__left__bot d-flex">
-            <div class="col__left__top__client">
-              <p>1200+</p>
-              <h3 class="heading3__dark">Happy Clients</h3>
-              <p>We help our clients increase profits by increasing their visibility online.</p>
+  <section class="number container-fluid">
+    <div class="number__corp container container-sm container-md container-lg container-xl container-xxl">
+      <div class="number__corp__content">
+        <div class="row">
+          <div class="col-6 col__left col__item">
+            <div class="col__left__top">
+              <span class="sub__heading fs-3 fs-4">WEB DESIGN AND DIGITAL MARKETING</span>
+              <h2 class="heading2__dark fs-1 fs-2">
+                We think strategy, UX design, and web development
+              </h2>
             </div>
-            <div class="col__left__top__project">
-              <p>13K+</p>
-              <h3 class="heading3__dark">Completed</h3>
-              <p>We help our clients increase profits by increasing their visibility online.</p>
+            <div class="col__left__bot d-flex">
+              <div class="col__left__top__client">
+                <p>1200+</p>
+                <h3 class="heading3__dark">Happy Clients</h3>
+                <p>We help our clients increase profits by increasing their visibility online...</p>
+              </div>
+              <div class="col__left__top__project">
+                <p>13K+</p>
+                <h3 class="heading3__dark">Completed</h3>
+                <p>We help our clients increase profits by increasing their visibility online...</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-6 col__right d-flex">
-          <div class="col__right__pic">
-            <img src="./img/ab.jpg" alt="hinh anh client">
-          </div>
-          <div class="col__right__pic">
-            <img src="./img/ab2.jpg" alt="hinh anh project">
+          <div class="col-6 col__right col__item d-flex">
+            <div class="col__right__pic">
+              <img src="./img/ab.jpg" alt="hinh anh client">
+            </div>
+            <div class="col__right__pic">
+              <img src="./img/ab2.jpg" alt="hinh anh project">
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
   <!--web design and digital marketing ***end***-->
 
   <!-- solution video ***start*** -->
   <section> </section>
-  <section>
-  <div class="solution container-fluid">
-    <div class="solution__content container d-flex">
-      <h2 class="heading2__light">
-        We are the next generation of the business world, creative solutions
-      </h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sunt in culpa qui officia sed deserunt mollit anim id
-        est laborum mollit anim id est nulla.</p>
-      <button class="btn__video btn2">
-        <i class='bx bx-right-arrow'></i>
-        <div class="video__media" style="display:none;">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Ve_1XZkG65U?si=L5VFe7mVik3GCaqz"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
-        </div>
-      </button>
+  <section class="container-fluid">
+    <div class="solution ">
+      <div class="solution__content container container-sm container-md container-lg container-xl container-xxl d-flex">
+        <h2 class="heading2__light fs-1 fs-2">
+          We are the next generation of the business world, creative solutions
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit sunt in culpa qui officia sed deserunt mollit anim id
+          est laborum mollit anim id est nulla.</p>
+        <a data-fancybox="gallery" data-caption="Caption #2" data-src="https://www.youtube.com/embed/9MJpfcD89DA?si=gtYgI_SglVw3qtjA" class="btn__video btn2" id="btnWatchVideo">
+          <i class='bx bx-right-arrow'></i>
+        </a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+  
   <!-- solution video ***end*** -->
-  <section> </section>
+  
   <!-- Meet the team ***start***-->
+  <section> </section>
   <section class="meet__team container-fluid">
-    <div class="meet__team__content container">
+    <div class="meet__team__content container container-sm container-md container-lg container-xl container-xxl">
       <!-- tieu de meet the team -->
       <div class="meet__team__top">
-        <span class="sub__heading">
+        <span class="sub__heading fs-3 fs-4">
           OUR PROFESSIONALS
         </span>
-        <h2 class="heading2__dark">
+        <h2 class="heading2__dark fs-2 fs-3 fs-4">
           Meet the Team
         </h2>
       </div>
       <!-- Member of meet the team -->
       <div class="meet__team__bot">
         <div class="row">
-          <div class="col-3 col__team__item">
+          <div class="col-sm-12 col-md-6 col-lg-3 col__team__item">
             <figure class="col__team__item__pic">
               <img src="./img/team1.jpg" alt="">
               <!-- tạo lớp overlay -->
@@ -265,7 +297,7 @@
               </p>
             </div>
           </div>
-          <div class="col-3 col__team__item">
+          <div class="col-sm-12 col-md-6 col-lg-3 col__team__item">
             <figure class="col__team__item__pic">
               <img src="./img/team2.jpg" alt="">
               <!-- tạo lớp overlay -->
@@ -287,7 +319,7 @@
               </p>
             </div>
           </div>
-          <div class="col-3 col__team__item">
+          <div class="col-sm-12 col-md-6 col-lg-3 col__team__item">
             <figure class="col__team__item__pic">
               <img src="./img/team3.jpg" alt="">
               <!-- tạo lớp overlay -->
@@ -312,7 +344,7 @@
             </div>
 
           </div>
-          <div class="col-3 col__team__item">
+          <div class="col-sm-12 col-md-6 col-lg-3 col__team__item">
             <figure class="col__team__item__pic">
               <img src="./img/team4.jpg" alt="">
               <!-- tạo lớp overlay -->
@@ -339,20 +371,21 @@
     </div>
   </section>
   <!-- Meet the team ***end***-->
-<!-- Why choose us ***start***-->
-<section></section>
-<section class="choose__us container-fluid">
-  <div class="container">
+
+  <!-- Why choose us ***start***-->
+  <section></section>
+  <section class="choose__us container-fluid">
+    <div class="container container-sm container-md container-lg container-xl container-xxl">
       <div class="choose__us__content">
         <!-- top part of why choose us -->
         <div class="choose__us__top">
           <p class="sub__heading">WHY CHOOSE US</p>
-          <h2 class="heading2__dark">People choose us because we serve the<br> best for everyone</h2>
+          <h2 class="heading2__dark fs-4 fs-3 fs-2 fs-1">People choose us because we serve the best for everyone</h2>
         </div>
         <!-- bottom part of why choose us -->
         <div class="choose__us__bot">
           <div class="row">
-            <div class="col-6 col__item d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col__item d-flex">
               <div class="col__item__icon">
                 <i class="fa-solid fa-suitcase"></i>
               </div>
@@ -361,7 +394,7 @@
                 <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio adipisicing.</p>
               </div>
             </div>
-            <div class="col-6 col__item d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col__item d-flex">
               <div class="col__item__icon">
                 <i class="fa-solid fa-gears"></i>
               </div>
@@ -370,7 +403,7 @@
                 <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio adipisicing.</p>
               </div>
             </div>
-            <div class="col-6 col__item d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col__item d-flex">
               <div class="col__item__icon">
                 <i class="fa-brands fa-searchengin"></i>
               </div>
@@ -379,7 +412,7 @@
                 <p>Lorem ipsum dolor sit amet,Ea consequuntur illum facere aperiam sequi optio adipisicing.</p>
               </div>
             </div>
-            <div class="col-6 col__item d-flex">
+            <div class="col-12 col-sm-12 col-md-6 col__item d-flex">
               <div class="col__item__icon">
                 <i class="fa-solid fa-chart-area"></i>
               </div>
@@ -391,28 +424,106 @@
           </div>
         </div>
       </div>
-  </div>
-</section>
-<!-- why choose us ***end*** -->
-<!-- contact with us ***start*** -->
-<section></section>
-<section class="contact container-fluid">
-  <div class="container">
-    <div class="contact__content d-flex">
-      <div class="contact__item contact__left">
-        <h3 class="heading3__dark">Let's talk about your project and see how we can work together</h3>
-        <p>Lorem ipsum dolor sit amet elit. Velit beatae rem ullam dolore nisi esse quasi, sit amet. Lorem ipsum dolor sit amet elit.</p>
-      </div>
-      <div class="contact__item contact__right">
-        <a href="#"><p>Get started on a project</p><i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+  <!-- why choose us ***end*** -->
+
+  <!-- contact with us ***start*** -->
+  <section></section>
+  <section class="contact container-fluid">
+    <div class="container container-sm container-md container-lg container-xl container-xxl">
+      <div class="contact__content d-flex">
+        <div class="contact__item contact__left">
+          <h3 class="heading3__dark">Let's talk about your project and see how we can work together</h3>
+          <p>Lorem ipsum dolor sit amet elit. Velit beatae rem ullam dolore nisi esse quasi, sit amet. Lorem ipsum dolor
+            sit amet elit.</p>
+        </div>
+        <div class="contact__item contact__right">
+          <a href="#">
+            <p>Get started on a project</p><i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- contact with us ***end*** -->
+  </section>
+  <!-- contact with us ***end*** -->
 
 
-  <footer></footer>
+  <!-- Footer ***start -->
+  <footer>
+    <div class="container container-sm container-md container-lg container-xl container-xxl">
+      <div class="row footer_top d-flex justify-content-start text-white">
+        <!-- footer logo -->
+        <div class="col__item scol-12 col-sm-12 col-md-6 col-lg-3 col-xl-4 footer_logo">
+          <div class="footer_create_logo d-flex align-items-center">
+            <i class="fa-solid fa-align-right"></i>
+            <a href="">
+              <p>Corp Vertion</p>
+              <p>Vision to your future</p>
+            </a>
+          </div>
+          <p>Lorem ipsum viverra feugiat. Pellen tesque <br> libero ut justo, ultrices in ligula. Semper at <br>
+            tempufddfel. Lorem ipsum dolor sit amet <br> Semper at elit team advisors.</p>
+          <div class="logo_social">
+            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <!-- footer contact -->
+        <div class="col__item scol-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 footer_contact">
+          <h4 class="heading4__light  fs-4 fs-3 fs-2 fs-1">CONTACT INFO</h4>
+          <ul>
+            <li>Address : Corp Vision, 343 marketing, #21 <br> cravel 1st lane street, NY - 62617.
+            </li>
+            <li>Phone Number :
+              <a href="">+1(21) 234 4567</a>
+            </li>
+            <li>Email :
+              <a href="">info@example.com</a>
+            </li>
+            <li>Support :
+              <a href="">info@support.com</a>
+            </li>
+          </ul>
+        </div>
+        <!-- footer category -->
+        <div class="col__item scol-12 col-sm-12 col-md-6 col-lg-3 col-xl-2 footer_cate">
+          <h4 class="heading4__light">CATEGORIES</h4>
+          <ul>
+            <li><a href="">Marketing Strategy</a></li>
+            <li><a href="">Startup Business</a></li>
+            <li><a href="">Web development</a></li>
+          </ul>
+        </div>
+        <!-- footer mega -->
+        <div class="col__item scol-12 col-sm-12 col-md-6 col-lg-2 col-xl-2 footer_meta">
+          <h4 class="heading4__light">META</h4>
+          <ul>
+            <li><a href="">Log in</a></li>
+            <li><a href="">Entries feed</a></li>
+            <li><a href="">Comments feed</a></li>
+            <li><a href="">WordPress.org</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- COPY RIGHT -->
+    <section class="copyright">
+      <div class="container">
+        <div class="copyright_content text-center">
+          <p>© 2023 Corp Vision All Rights Reserved | WordPress Theme by <a href="">W3Layouts.</a></p>
+        </div>
+      </div>
+    </section>
+  </footer>
+  <!-- all your content here -->
+  <a href="#" class="cd-top text-replace js-cd-top">
+    <i class="fa-solid fa-angle-up"></i>
+  </a>
+  <!-- footer ***end -->
 
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -433,6 +544,15 @@
 
   <!-- JS Font Boxicon -->
   <script src="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/dist/boxicons.min.js"></script>
+
+  <!-- fancy box -->
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script>
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
+  </script>
+
   <!-- Main Javascript -->
   <script src="./js/about.js"></script>
 </body>
